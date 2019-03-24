@@ -1,7 +1,7 @@
-Experitest - Cloud Agent ansible role
+Experitest - File Storage ansible role
 =========
 
-This role will install \ uninstall cloud agent for mac os hosts
+This role will install \ uninstall file storage for mac os hosts
 
 Requirements
 ------------

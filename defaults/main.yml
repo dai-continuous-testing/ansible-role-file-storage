@@ -2,7 +2,7 @@
 
 app_name: file-storage
 service_name: "com.experitest.{{ app_name }}"
-main_class: "com.experitest.cloudagent.MainForwarder"
+main_class: "com.experitest.filestore.StorageFileMain"
 
 server_port: 8051
 jmx_port: 51235

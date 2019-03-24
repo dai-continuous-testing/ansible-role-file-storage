@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: cloud_agent
+  role_name: file_storage
   author: Shai Atias
   description: DevOps Team
   company: Experitest, Ltd.

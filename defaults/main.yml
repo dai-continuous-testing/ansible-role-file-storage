@@ -13,7 +13,7 @@ maximum_file_size: "2GB"
 start_after_install: True
 
 clear_temp_folder: False
-clear_installation_folder_before_install: False
+clear_before_install: False
 
 convention: "Storage"
 cdn_name: "devops-artifacts.experitest.com"

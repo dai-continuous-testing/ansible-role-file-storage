@@ -18,3 +18,15 @@ clear_installation_folder_before_install: False
 convention: "Storage"
 cdn_name: "devops-artifacts.experitest.com"
 
+
+# basic_configuration:
+#   - key: file-storage.maximum-storage-size
+#     value: 1TB
+#   - key: file-storage.maximum-file-size
+#     value: 2GB
+
+# extended_configuration:
+#   - key: file-storage.maximum-storage-size
+#     value: 2TB
+#   - key: file-storage.maximum-file-size
+#     value: 4GB

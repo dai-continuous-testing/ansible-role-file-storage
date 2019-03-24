@@ -1,0 +1,20 @@
+---
+
+app_name: file-storage
+service_name: "com.experitest.{{ app_name }}"
+main_class: "com.experitest.cloudagent.MainForwarder"
+
+server_port: 8051
+jmx_port: 51235
+
+maximum_storage_size: "1TB"
+maximum_file_size: "2GB"
+
+start_after_install: True
+
+clear_temp_folder: False
+clear_installation_folder_before_install: False
+
+convention: "Storage"
+cdn_name: "devops-artifacts.experitest.com"
+

@@ -116,7 +116,7 @@
   win_lineinfile:
     path: "{{ installation_folder }}\\config\\application.properties"
     line: "{{ item }}"
-    with_items:
+  with_items:
       - "file-storage.maximum-storage-size={{ maximum_storage_size }}"
       - "file-storage.maximum-file-size={{ maximum_file_size }}"
       - "server.port={{ server_port }}"

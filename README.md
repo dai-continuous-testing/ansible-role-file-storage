@@ -15,7 +15,7 @@ Role Variables
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | state | should the application be present or absent | present, absent | present | no |
-| app_version | application version to install | string | 12.4.5373 | no |
+| app_version | application version to install | string | 12.4.5403 | no |
 | server_port | port number for the server | number | 8051 | no |
 | installation_folder | the folder in which the applction will be installed | string | for mac: ~/experitest/file-storage-version <br> for windows: C:\\Experitest\\file-storage-version  | no |
 | jmx_port | port number for jmx inspection | number | 51236 | no |

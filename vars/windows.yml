@@ -13,5 +13,4 @@ s3_download_url : "https://{{ cdn_name }}/{{ relative_path }}/{{ installer_file_
 
 launcher_file_name: "start.bat"
 
-## if need to provide custom file storag path 
-# file_storage_folder: "C://file-storage"
+file_storage_folder: "C:\\ProgramData\\file-storage-content"

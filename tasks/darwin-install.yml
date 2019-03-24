@@ -9,6 +9,7 @@
   - service_name
   - main_class
   - installation_folder
+  - file_storage_folder
   - clear_installation_folder_before_install
   - server_port
   - jmx_port
@@ -124,7 +125,7 @@
       - "file-storage.maximum-storage-size={{ maximum_storage_size }}"
       - "file-storage.maximum-file-size={{ maximum_file_size }}"
       - "server.port={{ server_port }}"
-     # - "file-storage.storage-dir={{ file_storage_folder }}"  #if need to provide custom file storage path
+      - "file-storage.storage-dir={{ file_storage_folder }}"
   become: yes
 
 - name: set permissions for logs folder

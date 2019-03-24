@@ -5,7 +5,7 @@ service_name: "com.experitest.{{ app_name }}"
 main_class: "com.experitest.filestore.StorageFileMain"
 
 server_port: 8051
-jmx_port: 51235
+jmx_port: 51236
 
 maximum_storage_size: "1TB"
 maximum_file_size: "2GB"

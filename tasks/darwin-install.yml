@@ -69,6 +69,8 @@
     path: "{{ installation_folder }}"
     state: absent
   when: clear_before_install == True
+  notify:
+    - start the service
 
 # unpack and copy all the files to the installation folder
 
@@ -98,6 +100,8 @@
 - name: copy the file to installation folder
   command: "cp -r {{ temp_folder }}/{{ (installer_file_name | splitext)[0] }}/{{ convention }}/ {{ installation_folder }}/"
   become: yes
+  notify:
+    - start the service
 
 - name: copy plist
   template:
@@ -141,13 +145,6 @@
     path: "{{ installation_folder }}/config/pairing.conf.xml"
     state: absent
   become: yes
-
-# start the service (optional)
-
-- name: load the service
-  command: "launchctl load {{ service_plist_file_path }}"
-  become: yes
-  when: start_after_install is defined and start_after_install == True
 
 # clear temp files (optional)
 

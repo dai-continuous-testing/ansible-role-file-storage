@@ -1,6 +1,8 @@
 ---
 
 app_name: file-storage
+app_version: 12.4.5403
+
 service_name: "com.experitest.{{ app_name }}"
 main_class: "com.experitest.filestore.StorageFileMain"
 
@@ -18,4 +20,8 @@ clear_temp_folder: False
 clear_before_install: False
 
 convention: "Storage"
+
+custom_download_url: ""
+
 cdn_name: "devops-artifacts.experitest.com"
+s3_download_url : "https://{{ cdn_name }}/{{ relative_path }}/{{ installer_file_name }}"

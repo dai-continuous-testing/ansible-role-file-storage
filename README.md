@@ -30,26 +30,3 @@ Example Playbook
 ----------------
 
 #### [see working example](/example)
-
-In requirements.yml file
-
-    - src: git+https://github.com/ExperitestOfficial/ansible-role-file-storage.git
-      version: master
-      name: file-storage
-
-
-In site.yml file
-
-    - hosts: file-storage
-      roles:
-        - role: file-storage
-          state: present
-          app_version: 12.3.866
-
-To invoke, run the following commands:
-
-- install dependencies \
-  *ansible-galaxy install -r requirements.yml*
-
-- run the playbook \
-  *ansible-playbook site.yml*

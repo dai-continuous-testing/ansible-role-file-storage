@@ -12,7 +12,16 @@ jmx_port: 51236
 maximum_storage_size: "1TB"
 maximum_file_size: "2GB"
 
-extra_app_props: {}
+base_application_properties:
+  - "server.port": "{{ server_port }}"
+  - "file-storage.maximum-storage-size": "{{ maximum_storage_size }}"
+  - "file-storage.maximum-file-size": "{{ maximum_file_size }}"
+  - "file-storage.storage-dir": "{{ file_storage_folder }}"    
+
+extra_application_properties: {}
+
+application_properties: "{{ base_application_properties | combine(extra_application_properties) }}"
+
 
 start_after_install: True
 

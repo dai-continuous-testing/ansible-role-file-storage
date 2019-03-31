@@ -19,7 +19,7 @@
   - launcher_file_name
   - maximum_storage_size
   - maximum_file_size
-  - extra_app_props
+  - application_properties
 
 # required dependencies
 
@@ -119,19 +119,7 @@
     path: "{{ installation_folder }}\\config\\application.properties"
     line: "{{ item.key }}={{ item.value }}"
     regexp: "^{{ item.key | replace('.', '\\.') }}="
-  with_dict:
-    - "server.port": "{{ server_port }}"
-    - "file-storage.maximum-storage-size": "{{ maximum_storage_size }}"
-    - "file-storage.maximum-file-size": "{{ maximum_file_size }}"
-    - "file-storage.storage-dir": "{{ file_storage_folder }}"    
-  become: yes
-
-- name: update custom application properties file (optional)
-  win_lineinfile:
-    path: "{{ installation_folder }}\\config\\application.properties"
-    line: "{{ item.key }}={{ item.value }}"
-    regexp: "^{{ item.key | replace('.', '\\.') }}="
-  with_dict: "{{ extra_app_props | default({}) }}"
+  with_dict: "{{ application_properties }}"
   become: yes
 
 - name: set permissions for logs folder

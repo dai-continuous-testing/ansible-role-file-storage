@@ -12,4 +12,4 @@ relative_path: "file-storage/windows"
 
 launcher_file_name: "start.bat"
 
-file_storage_folder: "C:\\ProgramData\\file-storage-content"
+file_storage_folder: "C:/ProgramData/file-storage-content"

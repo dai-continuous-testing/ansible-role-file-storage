@@ -21,6 +21,7 @@
   - maximum_storage_size
   - maximum_file_size
   - application_properties
+  - extra_java_options
 
 # required dependencies
 

@@ -9,6 +9,8 @@ main_class: "com.experitest.filestore.StorageFileMain"
 server_port: 8082
 jmx_port: 51236
 
+extra_java_options: []
+
 maximum_storage_size: "1TB"
 maximum_file_size: "2GB"
 

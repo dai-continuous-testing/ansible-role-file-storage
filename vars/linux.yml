@@ -1,0 +1,17 @@
+---
+
+installation_root_folder: "/opt/experitest"
+installation_folder: "{{ installation_root_folder }}/{{ app_name }}-{{ app_version }}"
+
+# https://superuser.com/questions/332610/where-is-the-temporary-directory-in-linux
+# /tmp      - temp folder
+# /var/tmp  - temp folder that is preservered after reboot
+temp_folder: /var/tmp/experitest
+
+service_name: "{{ app_name }}"
+
+installer_file_name: "dist-Mac-STORAGE-{{ app_version }}.zip"
+
+relative_path: "file-storage/osx"
+
+launcher_file_name: "start.sh"

@@ -7,6 +7,7 @@ required_modifiable_fields:
   - installation_folder
   - maximum_storage_size
   - maximum_file_size
+  - java_version
 
 app_name: file-storage
 __app_version: 12.8.7025
@@ -16,6 +17,8 @@ main_class: "com.experitest.filestore.StorageFileMain"
 
 __server_port: 8082
 __jmx_port: 51236
+
+__java_version: 1.8.0_181
 
 extra_java_options: []
 
@@ -44,6 +47,8 @@ custom_download_url: ""
 
 cdn_name: "devops-artifacts.experitest.com"
 s3_download_url: "https://{{ cdn_name }}/{{ relative_path }}/{{ installer_file_name }}"
+
+java_download_url: "https://{{ cdn_name }}/{{ java_relative_path }}/{{ java_download_filename }}"
 
 #
 

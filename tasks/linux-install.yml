@@ -113,8 +113,6 @@
 
 # stop old service
 
-# stop old service
-
 - name: stop the old service
   systemd:
     name: "{{ service_name }}"

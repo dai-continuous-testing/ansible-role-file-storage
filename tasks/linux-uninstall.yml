@@ -2,17 +2,26 @@
 - name: assert all vars are set
   assert: { that: "{{ item }} != '' " }
   with_items:
+  - app_name
+  - service_name
   - installation_root_folder
-  - service_plist_file_path
+  - service_file_path
   - temp_folder
 
+- name: gather installed services
+  service_facts:
+
 - name: stop the service
-  command: "launchctl unload {{ service_plist_file_path }}"
+  service:
+    name: "{{ service_name }}"
+    state: stopped
+    enabled: no
+  when: "service_name in services"
   become: yes
 
 - name: remove the service
   file:
-    path: "{{ service_plist_file_path }}"
+    path: "{{ service_file_path }}"
     state: absent
   become: yes
 

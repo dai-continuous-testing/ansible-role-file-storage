@@ -12,7 +12,6 @@ required_modifiable_fields:
 app_name: file-storage
 __app_version: 12.8.7025
 
-service_name: "com.experitest.{{ app_name }}"
 main_class: "com.experitest.filestore.StorageFileMain"
 
 __server_port: 8082

@@ -166,7 +166,7 @@
     src: systemd.service.j2
     dest: "{{ service_file_path }}"
   become: yes
-s
+
 - name: copy start script
   template:
     src: start.sh.j2

@@ -34,6 +34,9 @@ extra_application_properties: {}
 
 application_properties: "{{ base_application_properties | combine(extra_application_properties) }}"
 
+extra_logback_properties: {}
+
+logback_properties: "{{ extra_logback_properties }}"
 
 start_after_install: True
 

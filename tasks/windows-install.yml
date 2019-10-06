@@ -21,6 +21,7 @@
   - maximum_file_size
   - application_properties
   - extra_java_options
+  - kill_notepad
 
 # required dependencies
 

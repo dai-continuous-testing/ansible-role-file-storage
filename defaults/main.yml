@@ -12,7 +12,6 @@ required_modifiable_fields:
 app_name: file-storage
 __app_version: 12.9.7234
 
-service_name: "com.experitest.{{ app_name }}"
 main_class: "com.experitest.filestore.StorageFileMain"
 
 __server_port: 8082
@@ -35,11 +34,16 @@ extra_application_properties: {}
 
 application_properties: "{{ base_application_properties | combine(extra_application_properties) }}"
 
+extra_logback_properties: {}
+
+logback_properties: "{{ extra_logback_properties }}"
 
 start_after_install: True
 
 clear_temp_folder: False
 clear_before_install: False
+
+kill_notepad: False
 
 convention: "Storage"
 

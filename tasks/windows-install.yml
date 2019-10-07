@@ -21,6 +21,7 @@
   - maximum_file_size
   - application_properties
   - extra_java_options
+  - kill_notepad
 
 # required dependencies
 
@@ -104,6 +105,29 @@
     state: absent
   become: yes
 
+# kill notepadd
+
+- name: kill notepad apps
+  block:
+    - name: kill notepad
+      win_shell: |
+        taskkill /F /IM notepad.exe
+      register: killnotepad
+      changed_when: killnotepad.rc == 0 and 'The process "notepad.exe" not found.' not in killnotepad.stderr
+      failed_when: killnotepad.rc != 0 and 'The process "notepad.exe" not found.' not in killnotepad.stderr
+      become: yes
+
+    - name: kill notepad++
+      win_shell: |
+        taskkill /F /IM notepad++.exe
+      register: killnotepadplusplus
+      changed_when: killnotepadplusplus.rc == 0 and 'The process "notepad++.exe" not found.' not in killnotepadplusplus.stderr
+      failed_when: killnotepadplusplus.rc != 0 and 'The process "notepad++.exe" not found.' not in killnotepadplusplus.stderr
+      become: yes
+
+  when: kill_notepad == True
+  ignore_errors: yes
+
 # delete old installation (optional)
 
 - name: clear old installation folder
@@ -158,6 +182,14 @@
   with_dict: "{{ application_properties }}"
   become: yes
 
+- name: update logback properties file
+  win_lineinfile:
+    path: "{{ installation_folder }}\\config\\logback.properties"
+    line: "{{ item.key }}={{ item.value }}"
+    regexp: "^{{ item.key | replace('.', '\\.') }}="
+  with_dict: "{{ logback_properties }}"
+  become: yes
+  
 - name: set permissions for logs folder
   win_file:
     path: "{{ installation_folder }}\\logs"

@@ -6,6 +6,7 @@ This role will install \ uninstall file storage for windows, linux and mac os ho
 Requirements
 ------------
 
+[ansible-role-java8](https://github.com/ExperitestOfficial/ansible-role-java8) must be installed on all machines. <br>
 Supports windows, linux and mac os hosts only.
 
 Role Variables

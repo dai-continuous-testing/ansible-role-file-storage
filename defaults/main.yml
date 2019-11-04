@@ -4,7 +4,7 @@ required_modifiable_fields:
   - app_version
   - server_port
   - jmx_port
-  - installation_folder
+  - installation_root_folder
   - maximum_storage_size
   - maximum_file_size
   - java_version

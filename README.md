@@ -20,7 +20,7 @@ Role Variables
 | extra_application_properties | additional props to be override in application.properties file | dict | {} | no |
 | extra_logback_properties | additional props to be override in logback.properties file | dict | {} | no |
 | extra_java_options | extand java options | array of strings | [] | no |
-| installation_folder | the folder in which the applction will be installed | string | for mac: /Applications/Experitest/file-storage-version <br> for windows: C:\\Experitest\\file-storage-version <br> for linux: /opt/Experitest/file-storage-version | no |
+| installation_root_folder | the root folder in which the application will be installed under file-storage-{version} folder | string | for mac: /Applications/Experitest <br> for windows: C:\\Experitest <br> for linux: /opt/Experitest | no |
 | jmx_port | port number for jmx inspection | number | 51236 | no |
 | java_version | java jre version to install | string | 1.8.0_181 | no |
 | custom_download_url | custom url to download the installation from (zip format) | string |  | no |

@@ -8,9 +8,14 @@ required_modifiable_fields:
   - maximum_storage_size
   - maximum_file_size
   - java_version
+  - installer_checksum
 
 app_name: file-storage
-__app_version: 12.10.7560
+__app_version: 12.12.7794
+
+darwin_installer_checksum: "10e41aea2730a9d06468aa5c0c510848c87c98bdb9aeb372098735d5ba796715"
+linux_installer_checksum: "3699bebf0378c06a0d748cf8fd406b573e53cee8cf6efe7339836a75aa6bcbcc"
+windows_installer_checksum: "149f56f14e6bad3fe43f8fd7170f274097db760c7f16629ec88a9e8643b2be27"
 
 main_class: "com.experitest.filestore.StorageFileMain"
 

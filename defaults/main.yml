@@ -10,7 +10,7 @@ required_modifiable_fields:
   - java_version
 
 app_name: file-storage
-__app_version: 20.3.8449
+__app_version: 20.3.8488
 
 main_class: "com.experitest.filestore.StorageFileMain"
 

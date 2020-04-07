@@ -8,6 +8,7 @@ required_modifiable_fields:
   - maximum_storage_size
   - maximum_file_size
   - java_version
+  - deployment_mode
 
 app_name: file-storage
 __app_version: 20.2.8326

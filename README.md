@@ -29,6 +29,8 @@ Role Variables
 | clear_before_install | removing old installation before installing new version | boolean | False | no |
 | kill_notepad | kill notepad/notepadd++ apps on windows | boolean | False | no |
 | file_storage_folder | folder that will contain the data | string | for mac: /Library/Application Support/Experitest/file-storage <br> for windows: C:\\ProgramData\\file-storage <br> for linux: /var/lib/Experitest/file-storage | no |
+| custom_download_username | username to download from custom url on windows | string |  | no |
+| custom_download_password | password to download from custom url on windows | string |  | no |
 
 Example Playbook
 ----------------

@@ -24,13 +24,13 @@ Role Variables
 | jmx_port | port number for jmx inspection | number | 51236 | no |
 | java_version | java jre version to install | string | 1.8.0_181 | no |
 | custom_download_url | custom url to download the installation from (zip format) | string |  | no |
+| custom_download_username | username to download from custom url on windows | string |  | no |
+| custom_download_password | password to download from custom url on windows | string |  | no |
 | start_after_install | should application start after installation is completed | boolean | True | no |
 | clear_temp_folder | remove temp folder after installation | boolean | False | no |
 | clear_before_install | removing old installation before installing new version | boolean | False | no |
 | kill_notepad | kill notepad/notepadd++ apps on windows | boolean | False | no |
 | file_storage_folder | folder that will contain the data | string | for mac: /Library/Application Support/Experitest/file-storage <br> for windows: C:\\ProgramData\\file-storage <br> for linux: /var/lib/Experitest/file-storage | no |
-| custom_download_username | username to download from custom url on windows | string |  | no |
-| custom_download_password | password to download from custom url on windows | string |  | no |
 
 Example Playbook
 ----------------

@@ -12,7 +12,7 @@ required_modifiable_fields:
   - custom_download_password
 
 app_name: file-storage
-__app_version: 22.3.14164
+__app_version: 22.3.14179
 
 main_class: "com.experitest.filestore.StorageFileMain"
 

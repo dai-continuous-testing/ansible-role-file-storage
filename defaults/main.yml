@@ -19,7 +19,7 @@ main_class: "com.experitest.filestore.StorageFileMain"
 __server_port: 8082
 __jmx_port: 51236
 
-__java_version: 8u292-b10
+__java_version: 17.0.3_7
 
 extra_java_options: []
 

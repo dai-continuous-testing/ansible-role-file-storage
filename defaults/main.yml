@@ -3,7 +3,6 @@
 required_modifiable_fields:
   - app_version
   - server_port
-  - jmx_port
   - installation_root_folder
   - maximum_storage_size
   - maximum_file_size
@@ -12,14 +11,13 @@ required_modifiable_fields:
   - custom_download_password
 
 app_name: file-storage
-__app_version: 12.12.7908
+__app_version: 22.3.14150
 
 main_class: "com.experitest.filestore.StorageFileMain"
 
 __server_port: 8082
-__jmx_port: 51236
 
-__java_version: 8u292-b10
+__java_version: 17.0.3_7
 
 extra_java_options: []
 
